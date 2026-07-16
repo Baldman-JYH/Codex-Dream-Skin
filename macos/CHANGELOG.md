@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.1 — 2026-07-16
+
+### 修复
+
+- 不再用 `launchctl submit` 托管带调试口的 Codex：退出 SwiftBar / 关掉 Codex 后不应再被 launchd 自动拉起
+- 暂停与完全恢复时清理 `com.openai.codex-dream-skin-studio.app` 作业
+
+---
+
 ## 1.1.0 — 2026-07-16
 
 ### 新增

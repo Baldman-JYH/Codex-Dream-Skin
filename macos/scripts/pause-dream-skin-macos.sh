@@ -25,6 +25,8 @@ if [ "$PORT_EXPLICIT" = "false" ] && [ -f "$STATE_PATH" ]; then
 fi
 
 REMOVED="false"
+# Drop any launchd job that would relaunch Codex with CDP after quit / quitting the menu bar.
+release_codex_launchd_job || true
 if [ -f "$STATE_PATH" ]; then
   stop_recorded_injector || true
 fi

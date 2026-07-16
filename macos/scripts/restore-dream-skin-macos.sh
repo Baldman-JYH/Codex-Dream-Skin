@@ -26,6 +26,8 @@ if [ "$PORT_EXPLICIT" = "false" ] && [ -f "$STATE_PATH" ]; then
 fi
 
 [ -f "$STATE_PATH" ] && stop_recorded_injector
+# Always remove the themed Codex launchd babysitter so quitting Codex stays quit.
+release_codex_launchd_job || true
 CODEX_RUNNING="false"
 codex_is_running && CODEX_RUNNING="true"
 DEBUG_READY="false"
